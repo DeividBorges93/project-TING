@@ -1,5 +1,6 @@
 from collections.abc import Iterator
 
+
 class Queue(Iterator):
     def __init__(self):
         self.__data = []
