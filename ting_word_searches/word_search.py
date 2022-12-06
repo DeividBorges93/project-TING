@@ -10,6 +10,7 @@ def exists_word(word, instance):
 
 def search_by_word(word, instance):
     result = []
+
     for dict in instance:
         occurrences = []
         for index, line in enumerate(dict['linhas_do_arquivo']):
@@ -18,11 +19,12 @@ def search_by_word(word, instance):
                     'linha': index + 1,
                     'conteudo': line
                 })
+
         if len(occurrences):
             data = {
                 'palavra': word,
                 'arquivo': dict['nome_do_arquivo'],
-                'occorencias': occurrences
+                'ocorrencias': occurrences
             }
             result.append(data)
     return result
